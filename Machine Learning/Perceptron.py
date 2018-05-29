@@ -1,6 +1,8 @@
 import sys
 import numpy as np
 
+# This is a single layer perceptron algorithm
+
 # transform data
 def get_data(dfile):
     
