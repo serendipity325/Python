@@ -62,3 +62,14 @@ def prediction(test, w):
     return pred, str(correct/float(y.shape[0]) * 100) + '%'  
 
 
+if __name__ == "__main__":
+    train = get_data('train')
+    test = get_data('a7a.test')
+    w = perceptron(train, eta = 0.3)
+    pred, accu = prediction(test, w)
+    print "Predicted labels :"
+    print pred
+    print "Accuracy is :"
+    print accu
+    
+    
