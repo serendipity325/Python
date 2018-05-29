@@ -4,7 +4,6 @@ import numpy as np
 def get_data(dfile):
     
     lst = []
-
     with open(dfile) as lines:
         
         for line in lines:
