@@ -67,7 +67,7 @@ if __name__ == "__main__":
     test = get_data('a7a.test')
     w = perceptron(train, eta = 0.3)
     pred, accu = prediction(test, w)
-    print "Predicted labels :"
+    print "Predicted labels are:"
     print pred
     print "Accuracy is :"
     print accu
