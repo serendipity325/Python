@@ -9,7 +9,7 @@ def get_data(dfile):
         
         for line in lines:
             line = line.strip()
-            point = [0,] * 120
+            point = [0,] * 125
             
             for tok in line.split()[1:]:
                 a, _ = tok.split(":")
@@ -65,7 +65,7 @@ def prediction(test, w):
 
 if __name__ == "__main__":
     train = get_data('train')
-    test = get_data('a7a.test')
+    test = get_data('test')
     w = perceptron(train, eta = 0.3)
     pred, accu = prediction(test, w)
     print "Predicted labels are:"
