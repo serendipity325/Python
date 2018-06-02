@@ -1,5 +1,4 @@
-# Hidden Markov Model (HMM) for sequence parsing 
-# using viterbi decoder algorithm.
+# Hidden Markov Model (HMM) for sequence parsing using viterbi decoder algorithm.
 
 The result are shown below.
 
