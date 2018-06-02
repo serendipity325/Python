@@ -1,6 +1,7 @@
-# Hidden Markov Model (HMM) for sequence parsing using viterbi decoder algorithm.
+# Hidden Markov Model (HMM) for sequence parsing 
+# using viterbi decoder algorithm.
 
-Result
+The result are shown below.
 
 Start decoding.
 39547 emission probabilities and 45 states in the training data.
