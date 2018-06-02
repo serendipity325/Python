@@ -33,7 +33,7 @@ def HMM_viterbi(line, emissions, transitions):
 
     return [states[x] for x in trellis(prev, max_index)]
 
-#parse sentence lines into observations and states
+#read a file and parse sentences of the file into observations and states
 def reader(filename):
     
     observations = []
@@ -64,7 +64,7 @@ def get_dict(observations, tags):
         
     return get_proportions(emissions), get_proportions(transitions)
         
-        
+#compute proportions of values of each key        
 def get_proportions(dic):
     
     for vs in dic.values():
@@ -76,6 +76,12 @@ def get_proportions(dic):
 
 #compute each emission probability
 def emiss_prob(emissions, observation, state):
+    
+    """
+    If emission probability of a sentence is 0, it could result bad prediction because
+    0 * viterbi[old] * transition[current] = 0.
+    So I assigned 0.01 to emission probability in this case.
+    """
     
     if all([x == 0 for x in emissions[observation]]):
         return 0.01
