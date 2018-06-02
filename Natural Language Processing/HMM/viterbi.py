@@ -83,7 +83,7 @@ def emiss_prob(emissions, observation, state):
     So I assigned 0.01 to emission probability in this case.
     """
     
-    if all([x == 0 for x in emissions[observation]]):
+    if len([x for x in emissions[observation]]) == 0:
         return 0.01
 
     probability = emissions[observation][state]
