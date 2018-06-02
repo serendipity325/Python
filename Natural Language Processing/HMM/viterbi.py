@@ -1,5 +1,38 @@
 from collections import defaultdict
 
+#HMM-viterbi decoding algorithm
+def HMM_viterbi(line, emissions, transitions):
+
+    n_l = len(line)
+    
+    states = transitions.keys()
+    n_s = len(states)
+    
+    viterbi = [[-1] * n_s for x in range(n_l)]
+    prev = [[0] * n_s for x in range(n_l)]
+   
+    for i in range(n_l):
+
+        for j in range(n_s):
+            if i > 0:
+
+                for k in range(n_s):
+                    result = (viterbi[i - 1][k] *
+                              trans_prob(transitions, states[k], states[j]) *
+                              emiss_prob(emissions, line[i], states[j]))
+                             
+
+                    if result > viterbi[i][j]:
+                        viterbi[i][j] = result
+                        prev[i][j] = k
+
+            else:
+                viterbi[i][j] = emiss_prob(emissions, line[i], states[j])
+
+    max_index = viterbi[-1].index(max(viterbi[-1]))
+
+    return [states[x] for x in trellis(prev, max_index)]
+
 #parse sentence lines into observations and states
 def reader(filename):
     
