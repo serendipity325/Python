@@ -74,6 +74,7 @@ def get_proportions(dic):
             
     return dic
 
+
 #compute each emission probability
 def emiss_prob(emissions, observation, state):
     
@@ -85,15 +86,14 @@ def emiss_prob(emissions, observation, state):
     
     if len([x for x in emissions[observation]]) == 0:
         return 0.01
-
-    probability = emissions[observation][state]
-    return probability
+    
+    else:
+        return emissions[observation][state]
 
 #compute each transition probability 
 def trans_prob(transitions, prev, curr):
     
-    probability = transitions[prev][curr]
-    return probability
+    return transitions[prev][curr]
 
 
 #generate the trail of indices that ends with that index given previous viterbi / initial index 
