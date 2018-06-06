@@ -1,7 +1,11 @@
 # Kneser-Ney trigram model
 
 
-main functions
+<main functions>
+
+get_words(x) is a function to manipulate train and test files.<br />
+get_ngrams(words) generates unigram, bigram, trigram, N1+(Wi-1, *), N1+(*, Wi), N1+(Wi-2, Wi-1, *),
+N1+(*, Wi-1, Wi), and N1+(*, Wi-1, *).<br />
 
 Kneser_Ney1 is the function for computing original version of trigram Kneser-Ney smoother.<br /> 
 Kneser_Ney2 is the function for computing revised version of trigram Kneser-Ney smoother.<br />
@@ -32,14 +36,14 @@ Result with original version of probability of bigram Kneser-Ney Smoothing: P_2(
 total log(p_kn) = -304802.752703<br />
 Perplexity      = 245.170541263<br />
 
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------
 
 Result with revised version of probability of bigram Kneser-Ney Smoothing: P_2(Wi|Wi-1)
 
 total log(p_kn) = -315568.855508<br />
 Perplexity      = 297.761118337<br />
 
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 
 
 The next result is with d = 0.9 for original and d = 07 for revision.
@@ -49,8 +53,6 @@ Result with original version of probability of bigram Kneser-Ney Smoothing: P_2(
 total log(p_kn) = -301348.39976<br />
 Perplexity      = 230.35002236<br />
 
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------
 
 Result with revised version of probability of bigram Kneser-Ney Smoothing: P_2(Wi|Wi-1)
 
