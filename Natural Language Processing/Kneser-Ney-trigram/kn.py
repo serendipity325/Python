@@ -1,5 +1,4 @@
 import numpy as np
-import json
 
 #read only words and add <s> and </s> to front and end of each line
 def get_words(x):
