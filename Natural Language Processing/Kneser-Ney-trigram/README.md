@@ -3,8 +3,8 @@
 
 main functions
 
-Kneser_Ney1 is the function for computing original version of trigram Kneser-Ney smoother. 
-Kneser_Ney2 is the function for computing revised version of trigram Kneser-Ney smoother.
+Kneser_Ney1 is the function for computing original version of trigram Kneser-Ney smoother.<br /> 
+Kneser_Ney2 is the function for computing revised version of trigram Kneser-Ney smoother.<br />
 
 get_KN1 is the function for computing probability and perplexcity of original version of trigram Kneser-Ney smoother,
 and generating list of trigram Kneser-Ney smoothers.<br />
