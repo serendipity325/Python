@@ -4,23 +4,6 @@ Note that input words are represented with a 100 dimensional embedding, and the 
 
 
 
-* functions
-
-
-1. reader(filename) is a function to separate words and tags.
-
-2. flatten_merge(X, Y) flattens list of lists first and returns merged list.
- 
-3. index_dicts(X, Y) generates two dictionaries. First dict's keys are words and values are words' positions. Second dict's keys are tags and values are tags' positions.
-
-4. inputs(Xs, ts, total_tags) returns three outputs:    
-
-   1) one-hot vector
-   
-   2) tags'index numbers
-   
-   3) five word windows centered on the current words
-
 
 &nbsp;
 &nbsp;
