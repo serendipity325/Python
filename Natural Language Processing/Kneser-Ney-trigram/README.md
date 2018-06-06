@@ -8,6 +8,7 @@ Kneser_Ney2 is the function for computing revised version of trigram Kneser-Ney 
 
 get_KN1 is the function for computing probability and perplexcity of original version of trigram Kneser-Ney smoother,
 and generating list of trigram Kneser-Ney smoothers.<br />
+
 get_KN2 is the function for computing probability and perplexcity of revised version of trigram Kneser-Ney smoother,
 and generating list of trigram Kneser-Ney smoothers.<br />
 
