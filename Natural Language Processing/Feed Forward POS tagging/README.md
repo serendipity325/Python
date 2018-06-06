@@ -22,11 +22,9 @@ Note that input words are represented with a 100 dimensional embedding, and the 
    3) five word windows centered on the current words
 
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 ************ Output ************
 
