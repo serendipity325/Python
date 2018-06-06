@@ -1,10 +1,10 @@
-#Kneser-Ney trigram model
+# Kneser-Ney trigram model
 
 
 main functions
 
 Kneser_Ney1 is the function for computing original version of trigram Kneser-Ney smoother. 
-Kneser_Ney2 is the function for computing revised version, suggested by professor, of trigram Kneser-Ney smoother.
+Kneser_Ney2 is the function for computing revised version of trigram Kneser-Ney smoother.
 
 get_KN1 is the function for computing probability and perplexcity of original version of trigram Kneser-Ney smoother,
 and generating list of trigram Kneser-Ney smoothers.
@@ -19,7 +19,7 @@ original version of trigram Kneser-Ney Smoothing is
 max[C(Wi-2, Wi-1, Wi) - d, 0] / C(Wi-2, Wi-1) + (d * N1+(Wi-2, Wi-1, .) / C(Wi-2, Wi-1)) * K,
 where K = max[C(Wi-1, Wi) -d, 0] / C(Wi-1) + (d * N1+(Wi-1, .) * N1+(., Wi)/ C(Wi-1) / N1+(., .))
 
-revised version, which was suggested by professor is
+revised version is
 
 max[C(Wi-2, Wi-1, Wi) - d, 0] / C(Wi-2, Wi-1) + (d * N1+(Wi-2, Wi-1, .) / C(Wi-2, Wi-1)) * K,
 where K = max[N1+(., Wi-1, Wi) -d, 0] / N1+(., Wi-1, .) + (d * N1+(Wi-1, Wi) * N1+(., Wi)/ N1+(., Wi-1, .) / N1+(., .))
@@ -61,6 +61,3 @@ Result with revised version of probability of bigram Kneser-Ney Smoothing: P_2(W
 total log(p_kn) = -315003.886508
 Perplexity      = 294.73992822
 
-
-We can reduce the perplexities by changing d's. But two methods have minimum perplexity at 
-different d.
