@@ -139,3 +139,10 @@ if __name__ == "__main__":
     print "Number of observations(words) = %d." % total
     print "Number of correctly predicted states = %d." % correct
     print "Accuracy of this model is %d / %d = %f%%." % (correct, total, accuracy)
+    
+    
+    
+    
+    
+    
+    
