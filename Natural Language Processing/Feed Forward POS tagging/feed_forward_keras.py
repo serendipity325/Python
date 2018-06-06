@@ -21,7 +21,7 @@ def reader(filename):
 	             
     return words, tags
 
-#convert word to numbers
+#convert the element in a list to the corresponding indexes
 def converter(data, dct):
 
     for i in range(len(data)):
