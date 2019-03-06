@@ -189,7 +189,7 @@ def keywords_by_diff_ratios(df, a, least_ratios):
 
 def universal_unigram():
     """
-    create universal unigram using brown and reuters corpus from nltk
+    create universal unigram using brown and reuters corpora from nltk
     and fetch_20newsgroups corpus from scikit-learn
     """
     
