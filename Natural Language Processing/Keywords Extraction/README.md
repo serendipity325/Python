@@ -21,7 +21,8 @@ Select 3-7 keywords that are somewhat representative of what the content of the 
     
     
 3. non-overlapping-unigram-bigram model
-
+    
+    The objective of this model is to use words that are treated as a single word, such as San Francisco.  
     The algorithm is as follows:
 
     1. Using CountVectorize from Scikit-Learn, erase special characters and stop-words, 
