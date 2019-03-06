@@ -64,11 +64,11 @@ if __name__ == '__main__':
             words = f.read()
 
     #bag of words list
-    bog_of_words = (word_list(words))
+    bag_of_words = (word_list(words))
 
     #remove words that occur more than one
     train = []
-    for words in bog_of_words:
+    for words in bag_of_words:
         if words in train:
             words = +1
         else:
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     most_frequent_keywords = []
 
     for words in list_of_keywords:
-        most_frequent_keywords.append(bog_of_words[words])
+        most_frequent_keywords.append(bag_of_words[words])
 
     
     print'Extracted Keywords:'    
