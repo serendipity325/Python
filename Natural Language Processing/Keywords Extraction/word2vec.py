@@ -3,7 +3,7 @@
 
 import numpy as np
 
-
+# need to download stopwords from nltk first if you don't have them
 """
 import nltk
 nltk.download('stopwords')
