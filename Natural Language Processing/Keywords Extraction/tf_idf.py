@@ -91,8 +91,9 @@ def _merge(df1, df2):
 
 def performTermExtraction(df, a, b):
     """
-    remove words sequentially by most and least elimination ratios
-    return a frequency table with 3 - 7 words or error message  
+    1. Eliminate the most frequent term
+    2 .Eliminate the two least frequent terms
+    3. Repeat steps (1) and (2) until the number of words in your frequency map is between three and seven  
     
     df: frequency table
     a:  elimination ratio of most frequent words
@@ -213,50 +214,13 @@ if __name__ == '__main__':
     with open('sample_jet.txt') as f:
             words = [f.read()]
 
-    local_unigram = get_TF(words)    
+    local_unigram = get_TF(words)  
     universal_unigram = universal_unigram()
     
-    frequency_table = _merge(local_unigram, universal_unigram)
-
-    print('Look at the keywords extracted by changing ratios')
-    print()
-    
-    #The following shows the keywords that can be extracted using various elimination ratios.
-    # a's are most frequent elimination ratios 
-        
-    a = 1
-    print('Selected Keywords with %d as most frequent elimination ratio and various least frequent elimination ratios' %a)
-    print()
-    keywords_by_diff_ratios(frequency_table, a, least_ratios(frequency_table, a))
+    ##########################################      TF-IDF      ##########################################    
     print()
     print()
-    
-    a = 2
-    print('Selected Keywords with %d as most frequent elimination ratio and various least frequent elimination ratios' %a)
-    print()
-    keywords_by_diff_ratios(frequency_table, a, least_ratios(frequency_table, a))
-    print()
-    print()
-    
-    
-    a = 5
-    print('Selected Keywords with %d as most frequent elimination ratio and various least frequent elimination ratios' %a)
-    print()
-    keywords_by_diff_ratios(frequency_table, a, least_ratios(frequency_table, a))
-    print()
-    print()    
-    
-    a = 10
-    print('Selected Keywords with %d as most frequent elimination ratio and various least frequent elimination ratios' %a)
-    print()
-    keywords_by_diff_ratios(frequency_table, a, least_ratios(frequency_table, a))
-    print()
-    print()
-
-    ##########################################       #4 with TF-IDF      ##########################################    
-    print()
-    print()
-    print('Result of #4 with TF-IDF')
+    print('Result with TF-IDF')
     
     #train data for TF-IDF
     train_data = brown.words(categories='adventure') + brown.words(categories='lore') + brown.words(categories='fiction')
@@ -272,5 +236,26 @@ if __name__ == '__main__':
     print('*Frequency table*')      
     with pd.option_context('display.max_rows', None, 'display.max_columns', None):
             print(frequency_table2)
+    print()
+    print()
+    
+    
+    #####################################      Extract Manually      #####################################
+    
+    #sort words of equal count (sub group) by universal frequency table
+    frequency_table_jet = _merge(local_unigram, universal_unigram)
+    
+    # extract keywords manually by remove one most frequent word and two least frequent words repeatedly
+    # erasing ratio between the most and least frequent words can be adjustable
+    df = performTermExtraction(frequency_table_jet, 1, 2)       
+    
+
+    print('Extracted Keywords:')
+    return_result(df)
+    print()
+    print()
+    print('*Frequency table*')
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+        print(frequency_table_jet)
     print()
     print()
