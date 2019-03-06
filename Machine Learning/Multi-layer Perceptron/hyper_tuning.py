@@ -13,7 +13,7 @@ from keras.layers import Dense, Activation, Embedding, Flatten, LSTM
 from keras.wrappers.scikit_learn import KerasClassifier
 
 """
-Hyper parameters tuning¶
+Hyper parameters tuning
 Hyper-parameters tested are as below:
 
 optimizers: 'rmsprop', 'adam'
