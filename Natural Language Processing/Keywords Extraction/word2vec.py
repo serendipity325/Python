@@ -3,6 +3,12 @@
 
 import numpy as np
 
+
+"""
+import nltk
+nltk.download('stopwords')
+"""
+
 from nltk.corpus import stopwords
 from nltk.tokenize import RegexpTokenizer
 from gensim.models import KeyedVectors
