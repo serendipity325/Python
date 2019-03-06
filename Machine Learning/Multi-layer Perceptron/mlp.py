@@ -9,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from keras import backend as K
 from keras.models import Sequential
 from keras.utils import np_utils, to_categorical
-from keras.layers import Dense, Activation, Embedding, Flatten, LSTM
+from keras.layers import Dense, Activation, Embedding, Flatten
 from keras.wrappers.scikit_learn import KerasClassifier
 
 def proprocessing(data):
