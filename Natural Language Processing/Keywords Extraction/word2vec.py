@@ -1,5 +1,5 @@
-#   Please run this file in python2.
-#   It would take too much time to train the embedding model with python3.
+#   Please run this file on Python2.
+#   It would take too much time to train the embedding model on Python3.
 
 import numpy as np
 
