@@ -1,4 +1,4 @@
-# Multi Layer Perceptron
+# Multi-layer Perceptron
 
 Classify categorical data using Keras.
 
@@ -13,7 +13,7 @@ Classify categorical data using Keras.
     Scaling was accomplished using sklearn’s MinMaxScaler.
 
 
-2. Multi Layer Perceptron
+2. Multi-layer Perceptron
 
     I used Multi-layer perceptron to classify the target variable of test data. 
     I converted the target values them using one-hot encoding.
