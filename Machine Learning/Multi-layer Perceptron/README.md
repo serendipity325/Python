@@ -19,7 +19,7 @@ Classify categorical data using Keras.
     I converted the target values as binary vectors using one-hot encoding.
 
 
-3. KFold Cross Validation
+3. K-Fold Cross Validation
 
     I evaluated the performance of my deep learning models using Keras and Scikit-Learn. 
     KFold CV provides a robust estimate of the performance of a model on unseen data. 
