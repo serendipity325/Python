@@ -1,6 +1,6 @@
 # Keywords Extraction
 
-Select 3-7 keywords that are somewhat representative of what the content of the document is. 
+Select 3-10 keywords that are somewhat representative of what the content of the document is. 
 
 1. TF-IDF 
 
@@ -13,7 +13,7 @@ Select 3-7 keywords that are somewhat representative of what the content of the 
 2. word2vec
 
     The model takes word2vec representations of words in a vector space. 
-    I used Google News corpora which provided by Google which consist of 3 million word vectors. 
+    I used Google News corpora provided by Google which consist of 3 million word vectors. 
     Due to the large size of the data, it takes about 30 minutes to train the embedding model.
     The second step is to find the PageRank value of each word. In the model PageRank algorithm takes word2vec representations of words. 
     The cosine distance and similarity is used to calculate edge weights between nodes. 
@@ -22,7 +22,7 @@ Select 3-7 keywords that are somewhat representative of what the content of the 
     
 3. non-overlapping-unigram-bigram model
     
-    The objective of this model is to use words that are treated as a single word, such as San Francisco.  
+    The objective of this model is to select words that are treated as a single word, such as San Francisco.  
     The algorithm is as follows:
 
     1. Using CountVectorize from Scikit-Learn, erase special characters and stop-words, 
