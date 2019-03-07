@@ -16,7 +16,7 @@ Classify categorical data using Keras.
 2. Multi-layer Perceptron
 
     I used Multi-layer perceptron to classify the target variable of test data. 
-    I converted the target values them using one-hot encoding.
+    I converted the target values as binary vectors using one-hot encoding.
 
 
 3. KFold Cross Validation
